@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wdd - 231</title>
+    <meta name="description" content="WDD 231 - Web Frontend Development I. Joe Candelario's course assignment portal.">
+    <meta name="author" content="Joe Candelario">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Joe Candelario - WDD 231 - Web Frontend Development I</title>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>Wdd - 231</h1>
+    <header>
+        <img src="images/IMG_0069.jpg" alt="My Profile Image">
+        <h1>Joe Candelario</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="https://github.com/wladij">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/joe-candelario-14ba9a1a4/" target="_blank">LinkedIn</a></li>
+
+            <span class="hamburger" id="hamburger">&#9776;</span>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Course Work</h2>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+        </section>
+        <section class="card">
+            <h2>Toloria, Madagascar</h2>
+            <img src="images/Ifaty_beach_Madagascar.jpg" alt="Toloria, Madagascar">
+            <p>Mangily beach near Toliara, Madagascar</p>
+        </section>
+        <section class="card" >
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="options">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+    
+            
+            <div class="boxes" id="boxContainer">
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&#169; <span id="current-year"></span> Joe Candelario<img src="images/ecuador.png" alt="Ecuador Flag">  Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+    
 </body>
 </html>
