@@ -1,3 +1,5 @@
+console.log('JS cargado');
+
 document.addEventListener("DOMContentLoaded", function() {
     
     const currentYear = new Date().getFullYear();
@@ -89,9 +91,9 @@ createBoxes(allBoxes);
 
 
 
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+const hamburger = document.querySelector('#hamburger')
+const links = document.querySelector('#nav-links')
 
 hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+    links.classList.toggle('show')
+} )
