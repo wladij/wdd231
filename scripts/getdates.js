@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cse: document.getElementById('cse-courses'),
     };
 
-    // Renderiza los cursos
+   
     const renderCourses = (filteredCourses) => {
-        courseList.innerHTML = ''; // Limpia el contenido anterior
+        courseList.innerHTML = ''; 
         let credits = 0;
 
         filteredCourses.forEach((course) => {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const courseCard = document.createElement('div');
             courseCard.classList.add('course-card');
-            if (course.completed) courseCard.classList.add('completed'); // Añade estilo especial si está completado
+            if (course.completed) courseCard.classList.add('completed'); 
 
             courseCard.innerHTML = `
                 <h3>${course.subject} ${course.number}: ${course.title}</h3>
@@ -127,10 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
             courseList.appendChild(courseCard);
         });
 
-        totalCredits.textContent = credits; // Actualiza los créditos
+        totalCredits.textContent = credits; 
     };
 
-    // Filtrar cursos por tipo
+   
     const filterCourses = (type) => {
         if (type === 'all') {
             return courses;
@@ -138,12 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return courses.filter((course) => course.subject === type.toUpperCase());
     };
 
-    // Listeners para los botones
+    
     buttons.all.addEventListener('click', () => renderCourses(filterCourses('all')));
     buttons.wdd.addEventListener('click', () => renderCourses(filterCourses('wdd')));
     buttons.cse.addEventListener('click', () => renderCourses(filterCourses('cse')));
 
-    // Renderiza todos los cursos inicialmente
+    
     renderCourses(courses);
 });
 
