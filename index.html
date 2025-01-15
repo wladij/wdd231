@@ -18,13 +18,11 @@
     </header>
 
     <nav>
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        
 
-        <ul id="nav-links">
+       
+        <a id="menu" href="#"></a>
+        <ul id="nav-links" class="nav-links">
             
             <li><a href="#">Home</a></li>
             <li><a href="#">Chamber</a></li>
@@ -43,25 +41,24 @@
             <ul></ul>
             <ul></ul>
         </section>
-        <section class="card">
+        <section class="card" id="section-2">
             <h2>Toloria, Madagascar</h2>
+            <div class="image-container">
             <img src="images/Ifaty_beach_Madagascar.jpg" alt="Toloria, Madagascar">
+            </div>
             <p>Mangily beach near Toliara, Madagascar</p>
         </section>
-        <section class="card" >
+        
+        <section id="certificates" class="card">
             <h2>Web and Computer Programming Certificate</h2>
-            <div class="options">
-                <button id="all">All</button>
-                <button id="cse">CSE</button>
-                <button id="wdd">WDD</button>
+            <div class="course-buttons">
+              <button id="all-courses">All Courses</button>
+              <button id="wdd-courses">WDD Courses</button>
+              <button id="cse-courses">CSE Courses</button>
             </div>
-    
-            
-            <div class="boxes" id="boxContainer">
-                
-            </div>
-        </section>
-
+            <div id="course-list" class="courses-grid"></div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+          </section>
     </main>
 
     <footer>
