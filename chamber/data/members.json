@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Tech Innovations Inc.",
+      "address": "123 Silicon Valley, San Francisco, CA, 94105",
+      "phone": "+1-800-555-1234",
+      "website": "https://www.techinnovations.com",
+      "image": "tech_innovations_logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "A leader in cutting-edge technology and AI solutions."
+    },
+    {
+      "name": "EcoGreen Solutions",
+      "address": "456 Green St, Los Angeles, CA, 90001",
+      "phone": "+1-800-555-5678",
+      "website": "https://www.ecogreensolutions.com",
+      "image": "ecogreen_logo.png",
+      "membershipLevel": 2,
+      "otherInfo": "Focused on sustainable products and green energy solutions."
+    },
+    {
+      "name": "HealthFirst Pharmaceuticals",
+      "address": "789 Wellness Blvd, New York, NY, 10001",
+      "phone": "+1-800-555-8765",
+      "website": "https://www.healthfirstpharma.com",
+      "image": "healthfirst_logo.png",
+      "membershipLevel": 3,
+      "otherInfo": "Innovative pharmaceutical company focused on improving healthcare."
+    },
+    {
+      "name": "NextGen Media",
+      "address": "101 Media Park, Chicago, IL, 60601",
+      "phone": "+1-800-555-2345",
+      "website": "https://www.nextgenmedia.com",
+      "image": "nextgen_media_logo.png",
+      "membershipLevel": 1,
+      "otherInfo": "A digital marketing agency specializing in social media strategies."
+    },
+    {
+      "name": "Innovative Automobiles",
+      "address": "202 Auto Dr, Detroit, MI, 48201",
+      "phone": "+1-800-555-3456",
+      "website": "https://www.innovativeautos.com",
+      "image": "innovative_autos_logo.png",
+      "membershipLevel": 2,
+      "otherInfo": "Manufacturing electric vehicles and futuristic automotive solutions."
+    },
+    {
+      "name": "Global Financial Partners",
+      "address": "303 Finance Plaza, London, UK, EC2V 5BQ",
+      "phone": "+44-20-555-6789",
+      "website": "https://www.globalfinancialpartners.com",
+      "image": "global_financial_logo.png",
+      "membershipLevel": 3,
+      "otherInfo": "A top-tier financial advisory firm with global clients."
+    },
+    {
+      "name": "Luxury Homes Realty",
+      "address": "404 Prestige Lane, Miami, FL, 33101",
+      "phone": "+1-800-555-4567",
+      "website": "https://www.luxuryhomesrealty.com",
+      "image": "luxury_homes_logo.png",
+      "membershipLevel": 2,
+      "otherInfo": "Specializing in high-end real estate and luxury properties."
+    }
+  ]
+  

@@ -18,69 +18,69 @@ body {
     font-size: var(--font-size);
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    
 }
 
 /* Header */
 header {
     background-color: var(--primary-color);
     color: var(--footer-text-color);
-    text-align: center;
-    padding: 15px 0;
+    display: flex;
+    padding: 25px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 header img {
-    width: 100px;
+    width: 90px;
     border-radius: 50%;
     margin-bottom: 10px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 1);
+    
 }
 
-#menu {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
 
-#menu::before{
-    content:"≡" ;
-}
 
 /* Navigation */
+#myButton {
+    display: none;
+   
+}
 nav {
-    background-color: var(--primary-color);
+    background-color:  #164563;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    /*grid-template-rows: 1fr;*/
 }
 
 .nav-links {
     list-style-type: none;
-    
+    display: flex;
     margin: 0 auto;
-    
+    gap: 4rem;
     max-width: 760px;
 }
 
+a.home-page {
+    background-color:#265a91;
+   }
 
 
 
 
-.nav-links li {
-    display: none;
-    
-  }
+
 
 .nav-links a {
-    display: block;
+    
     color: var(--secondary-color);
     text-decoration: none;
     font-weight: 700;
-    padding: 0.75rem;
+    padding: 0.75rem 2vw;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
-    text-align: left;
+    display: block;
     font-size: clamp(1rem, 2vmin, 1.5rem);
     
 }
@@ -90,13 +90,7 @@ nav {
     color: var(--secondary-color);
 }
 
-  .show li {
-    display: block;
-  }
 
-#menu.show::before{
-    content: "X";
-}
 /* Main Layout */
 main {
     display: grid;
@@ -232,7 +226,7 @@ footer img {
 /* Media Queries for Responsive Design */
 
 /* Mobile (Phones) */
-@media (min-width: 40em) {
+@media (min-width: 300px) and (max-width: 768px) {
     main {
         grid-template-columns: 1fr; 
     }
@@ -253,40 +247,79 @@ footer img {
         align-items: center;
     }
 
-   
-   
-    .nav-links {
-        display: flex;
-    }
 
-    .nav-links li{
-        display: block;
-
-        flex: 1 1 100%;
-    }
-
-    .nav-links a{
-        text-align: center;
-    }
-
-    #menu {
-        display: none;
-    }
-   
-    .courses-grid {
-        
-        padding: 0.5rem; 
-    }
-
-    .course-card {
-        padding: 0.8rem;
-    }
-
-    .course-buttons button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
+   nav {
+    background-color:  #164563; 
     
+    
+   }
+   header{
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    justify-content: normal;
+    gap: 30px
+   }
+   header img{
+    width: 44px;
+    height: 50px;
+    margin-bottom: 0;
+   }
+   header h1{
+    margin: 0;
+   }
+   #myButton {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+
+   }
+   #myButton::before{
+    content: "\2630";
+   }
+
+    
+   ul.nav-links li a{
+    
+    padding: .75rem 2vw;
+    color: #fff;
+    text-decoration: none;
+   }
+   a.home-page {
+    background-color:#265a91;
+    
+   }
+   ul.nav-links {
+    display: block;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+   }
+
+   
+   #myButton.show::before{
+    content: "X";
+   }
+   nav{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    padding: 0;
+    justify-content: normal;
+   }
+
+   nav ul {overflow: hidden;}
+  
+   nav.show {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+   }
 }
 
 
@@ -310,7 +343,7 @@ footer img {
         grid-template-columns: 2fr 1fr; 
     }
 
-    nav ul {
-        flex-direction: row;
-    }
+    
+
+
 }

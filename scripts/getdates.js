@@ -149,10 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  const mainnav = document.querySelector('.nav-links')
-  const hambutton = document.querySelector('#menu')
+  const mainnav = document.querySelector('#animateme')
+  const hambutton = document.querySelector('#myButton')
 
   hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
+    mainnav.classList.toggle('show');
+    
   });
