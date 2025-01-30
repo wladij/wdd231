@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("last-modified").innerText = "Last Modified: " + lastModified;
 });
 
-
+//hamburger menu
 const mainnav = document.querySelector('#animateme')
 const hambutton = document.querySelector('#myButton')
 
@@ -18,46 +18,46 @@ hambutton.addEventListener('click', () => {
   
 });
 
-
+// current-weather
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '21f0537518255e76b9623cbb2fc6112c'; // Reemplázalo con tu clave de API de OpenWeatherMap.
-    const city = 'Timbuktu'; // Ciudad para obtener el clima.
+    const apiKey = '21f0537518255e76b9623cbb2fc6112c'; 
+    const city = 'Timbuktu'; 
     const weatherElement = document.getElementById('current-weather');
 
-    // Función para obtener el clima actual
+   
     async function fetchWeather() {
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
             if (!response.ok) {
-                throw new Error('Error al obtener los datos del clima');
+                throw new Error('Error in obtaining weather data');
             }
             const data = await response.json();
 
-            // Extraer información relevante
+            
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
             const description = data.weather[0].description;
 
-            // Mostrar los datos en la página
+            
             weatherElement.innerHTML = `
-                <p>🌡️ Temperatura: ${temperature}°C</p>
-                <p>💧 Humedad: ${humidity}%</p>
-                <p>🌤️ Descripción: ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
+                <p>🌡️ Temperature: ${temperature}°C</p>
+                <p>💧 Humidity: ${humidity}%</p>
+                <p>🌤️ Description: ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
             `;
         } catch (error) {
             console.error(error);
-            weatherElement.textContent = 'No se pudo obtener el clima actual.';
+            weatherElement.textContent = 'The current climate could not be obtained.';
         }
     }
 
-    // Llamar a la función
+    
     fetchWeather();
 });
 
-
+// weather
 document.addEventListener("DOMContentLoaded", () => {
-    const apiKey = "21f0537518255e76b9623cbb2fc6112c"; // Reemplaza con tu propia API Key de OpenWeather
-    const city = "Timbuktu"; // Puedes cambiar esto a la ciudad deseada
+    const apiKey = "21f0537518255e76b9623cbb2fc6112c"; 
+    const city = "Timbuktu"; 
 
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -110,30 +110,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//json 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("article");
 const membersList = document.getElementById("members-list");
 
-// Cargar datos desde el archivo JSON
+
 async function loadMemberData() {
     try {
-        const response = await fetch('data/members.json'); // Ajusta la ruta a tu archivo JSON
+        const response = await fetch('data/members.json'); 
         const members = await response.json();
 
-        // Mostrar los miembros
+        
         displayMembers(members);
     } catch (error) {
         console.error('Error fetching member data:', error);
     }
 }
 
-// Mostrar los miembros
+
 function displayMembers(members) {
-    // Limpiar cualquier contenido previo
+    
     membersList.innerHTML = '';
 
-    // Iterar sobre cada miembro y generar la estructura HTML correspondiente
+    
     members.forEach(member => {
         const memberCard = document.createElement("section");
 
@@ -150,7 +151,7 @@ function displayMembers(members) {
     });
 }
 
-// Obtener el nivel de membresía como texto
+
 function getMembershipLevel(level) {
     switch (level) {
         case 1: return 'Member';
@@ -160,42 +161,42 @@ function getMembershipLevel(level) {
     }
 }
 
-// Cambiar a la vista en grid
+
 gridbutton.addEventListener("click", () => {
     display.classList.add("grid");
     display.classList.remove("list");
 });
 
-// Cambiar a la vista en lista
+
 listbutton.addEventListener("click", () => {
     display.classList.add("list");
     display.classList.remove("grid");
 });
 
-// Cargar los datos cuando la página se cargue
+
 window.onload = loadMemberData;
 
 
-// Obtener el botón y el body
+// theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Verificar si ya hay un tema guardado en localStorage
+
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
     body.classList.add(currentTheme);
-    themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '🌞'; // Cambiar el ícono según el tema
+    themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '🌞'; 
 }
 
-// Función para alternar entre temas
+
 themeToggle.addEventListener('click', () => {
     if (body.classList.contains('dark')) {
         body.classList.remove('dark');
         localStorage.setItem('theme', 'light');
-        themeToggle.textContent = '🌙'; // Cambiar el ícono a luna
+        themeToggle.textContent = '🌙'; 
     } else {
         body.classList.add('dark');
         localStorage.setItem('theme', 'dark');
-        themeToggle.textContent = '🌞'; // Cambiar el ícono a sol
+        themeToggle.textContent = '🌞'; 
     }
 });

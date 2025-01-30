@@ -66,7 +66,7 @@
         cursor: pointer;
        }
        header .logo img {
-        max-height: 70px; /* Reduce la altura del logo en pantallas más pequeñas */
+        max-height: 70px; 
     }
        
        #myButton.show::before{
@@ -94,16 +94,16 @@
     }
 
     #hero img {
-        max-height: 50vh; /* Reduce la altura máxima para pantallas pequeñas */
+        max-height: 50vh;
     }
     
     #hero .cta {
-        font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
-        padding: 8px 16px; /* Reduce el padding del botón */
+        font-size: 0.9rem; 
+        padding: 8px 16px; 
     }
 
     .list{
-        overflow-wrap: break-word; /* Corta palabras largas para evitar desbordes */
+        overflow-wrap: break-word; 
         word-wrap: break-word;
         max-width: 100%;
         font-size: 0.7rem; 
