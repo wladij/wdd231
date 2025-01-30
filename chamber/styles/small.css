@@ -65,6 +65,9 @@
         border-radius: none;
         cursor: pointer;
        }
+       header .logo img {
+        max-height: 70px; /* Reduce la altura del logo en pantallas más pequeñas */
+    }
        
        #myButton.show::before{
         content: "X";
@@ -89,9 +92,33 @@
        main {
         grid-template-columns: 1fr; 
     }
+
+    #hero img {
+        max-height: 50vh; /* Reduce la altura máxima para pantallas pequeñas */
+    }
+    
+    #hero .cta {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+        padding: 8px 16px; /* Reduce el padding del botón */
+    }
+
+    .list{
+        overflow-wrap: break-word; /* Corta palabras largas para evitar desbordes */
+        word-wrap: break-word;
+        max-width: 100%;
+        font-size: 0.7rem; 
+        overflow-x: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .list section img{
+        display: none;
+    }
     footer {
         flex-direction: column;
     }
+
+
     }
     
     
