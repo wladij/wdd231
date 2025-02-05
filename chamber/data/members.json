@@ -5,7 +5,7 @@
       "phone": "+1-800-555-1234",
       "website": "https://www.techinnovations.com",
       "image": "tech_innovations_logo.png",
-      "membershipLevel": 1,
+      "membershipLevel": 2,
       "otherInfo": "A leader in cutting-edge technology and AI solutions."
     },
     {
@@ -32,7 +32,7 @@
       "phone": "+1-800-555-2345",
       "website": "https://www.nextgenmedia.com",
       "image": "nextgen_media_logo.png",
-      "membershipLevel": 1,
+      "membershipLevel": 2,
       "otherInfo": "A digital marketing agency specializing in social media strategies."
     },
     {

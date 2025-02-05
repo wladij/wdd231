@@ -37,12 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
             const description = data.weather[0].description;
-
+            const wind = data.wind.speed;
+            const atmospheric = data.main.pressure;
+            const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString()
+            const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString()
             
             weatherElement.innerHTML = `
+                <p>🌤️ Description: ${description.charAt(0).toUpperCase() + description.slice(1)}</p>    
                 <p>🌡️ Temperature: ${temperature}°C</p>
                 <p>💧 Humidity: ${humidity}%</p>
-                <p>🌤️ Description: ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
+                <p>🌬 Wind Speed: ${wind} m/s</p>
+                <p>🔆 Atmospheric Pressure: ${atmospheric} hPa</p>
+                <p>🌅 Sunrise: ${sunrise} am</p>
+                <p>🌇 Sunset: ${sunset} pm</p>
+
             `;
         } catch (error) {
             console.error(error);
@@ -53,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     fetchWeather();
 });
+
+
 
 // weather
 document.addEventListener("DOMContentLoaded", () => {
@@ -110,34 +120,38 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//json 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("article");
 const membersList = document.getElementById("members-list");
-
 
 async function loadMemberData() {
     try {
         const response = await fetch('data/members.json'); 
         const members = await response.json();
 
+        // Filtrar solo miembros Silver (2) o Gold (3)
+        const filteredMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
+
+        // Seleccionar aleatoriamente 2 o 3 miembros
+        const randomMembers = getRandomMembers(filteredMembers, Math.floor(Math.random() * 2) + 2);
         
-        displayMembers(members);
+        displayMembers(randomMembers);
     } catch (error) {
         console.error('Error fetching member data:', error);
     }
 }
 
+function getRandomMembers(members, count) {
+    const shuffled = members.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
 
 function displayMembers(members) {
-    
     membersList.innerHTML = '';
 
-    
     members.forEach(member => {
         const memberCard = document.createElement("section");
-
         memberCard.innerHTML = `
             <img src="${member.image}" alt="${member.name}" />
             <h3>${member.name}</h3>
@@ -151,7 +165,6 @@ function displayMembers(members) {
     });
 }
 
-
 function getMembershipLevel(level) {
     switch (level) {
         case 1: return 'Member';
@@ -161,20 +174,18 @@ function getMembershipLevel(level) {
     }
 }
 
-
 gridbutton.addEventListener("click", () => {
     display.classList.add("grid");
     display.classList.remove("list");
 });
-
 
 listbutton.addEventListener("click", () => {
     display.classList.add("list");
     display.classList.remove("grid");
 });
 
-
 window.onload = loadMemberData;
+
 
 
 // theme Toggle
