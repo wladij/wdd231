@@ -167,6 +167,8 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     word-wrap: break-word;
+    text-align: center;
+    
   }
   
   .course-card.completed {
@@ -175,7 +177,7 @@ h2 {
   }
   
   .course-card h3 {
-    margin-top: 0;
+    
     font-size: 1.2rem;
   }
   
@@ -206,7 +208,27 @@ h2 {
     background-color: #0056b3;
   }
 
+  #course-details {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+  }
 
+  ::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+
+  #course-details button {
+    position: absolute;
+   
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 0,1);
+  }
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -346,4 +368,23 @@ footer img {
     
 
 
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  50% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+}
+
+header h1 {
+  animation: fadeInLeft 3s ease-in-out infinite;
 }

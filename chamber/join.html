@@ -13,11 +13,11 @@
     <meta property="og:type" content="This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping." />
     <meta property="og:url" content="https://wladij.github.io/wdd231/chamber" />
     <meta property="og:image" content="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTDcEfiz-XEzNeNixV7q3soCsvfgItlOicBEkazLoTGsFXJgKj5XlQH6FgXs38yw_XrxEoJGz6OeMcy3NyR8M-RB6WkYNcoO46-vhAfMA" />
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/normalice.css">
     <link rel="stylesheet" href="styles/theme.css">
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 <body>
     <header>
@@ -41,56 +41,55 @@
         
        
     </header>
-    
     <main>
-        <div id="hero">
-            <img src="images/hero-image.webp" alt="Scalable, responsive hero image" width="1200" height="600">
-            <button class="cta"><a id="join-hero" href="join.html">Join</a></button>
+        <div class="container">
+            <form action="thanks.html" method="get" class="formulario">
+                <h2>Membership Application</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required title="Enter your name" autocomplete="given-name">
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last" name="last" required title="Enter your Last Name" autocomplete="family-name">
+                
+                <label for="title">Organizational title:</label>
+                <input type="text" id="title" name="title" required title="Your title within the organization" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required title="Your email address" autocomplete="email" placeholder="ejemplo@email.com">
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required title="Your cell phone number" autocomplete="tel">
+                
+                <label for="company">Company/Organization:</label>
+                <input type="text" id="company" name="company" required title="Name of your company or organization" autocomplete="organization">
+                
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership">
+                    <option value="np">Non-Profit</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+                
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description" title="Describe your organization"></textarea>
+                
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                
+                <button type="submit">Send Request</button>
+            </form>
+            
+
+            <dialog id="cards-details"></dialog>
+            <div id="cards">
+                
+            </div>
         </div>
         
-        <h2 class="home-h2" >Home</h2>
-        <div class="info-cards">
-            <section class="card">
-                <h3>Events</h3>
-            </section>
-            
-            <section class="card">
-                <h3>Current Weather</h3>
-                <p id="current-weather"></p>
-            </section>
-            <section class="card">
-                <h3>Weather Forecast</h3>
-                <div id="forecast-info">
-                    <div class="forecast-day" id="day-1">
-                        <h3 id="day-name-1">Loading...</h3>
-                        <p id="temp-1">Loading...</p>
-                        <p id="desc-1">Loading...</p>
-                    </div>
-                    <div class="forecast-day" id="day-2">
-                        <h3 id="day-name-2">Loading...</h3>
-                        <p id="temp-2">Loading...</p>
-                        <p id="desc-2">Loading...</p>
-                    </div>
-                    <div class="forecast-day" id="day-3">
-                        <h3 id="day-name-3">Loading...</h3>
-                        <p id="temp-3">Loading...</p>
-                        <p id="desc-3">Loading...</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="business-cards">
-            <div class="menu">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
-            </div>
-            <hr>
-            <article class="grid" id="members-list">
-               
-            </article>
-        </div>
+        
+        
     </main>
+    
 
     <footer>
         <div>

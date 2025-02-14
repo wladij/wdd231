@@ -130,10 +130,10 @@ async function loadMemberData() {
         const response = await fetch('data/members.json'); 
         const members = await response.json();
 
-        // Filtrar solo miembros Silver (2) o Gold (3)
+        
         const filteredMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
 
-        // Seleccionar aleatoriamente 2 o 3 miembros
+        
         const randomMembers = getRandomMembers(filteredMembers, Math.floor(Math.random() * 2) + 2);
         
         displayMembers(randomMembers);
@@ -153,7 +153,7 @@ function displayMembers(members) {
     members.forEach(member => {
         const memberCard = document.createElement("section");
         memberCard.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" />
+            
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
