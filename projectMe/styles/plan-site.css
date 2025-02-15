@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #441752;
+    --secondary-color: #8174A0;
+    --background-color: #f4f4f4;
+    --font-family2: 'Roboto', sans-serif;
+    --font-family1: 'Atkinson Hyperlegible Mono', sans-serif;
+}
+
+
+body {
+    font-family: var(--font-family2);
+    background-color:var(--background-color);
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    font-family: var(--font-family1);
+    color: var(--primary-color);
+}
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.highlight1 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+#font1 {
+    font-family: var(--font-family1);
+}
+#font2 {
+    font-family: var(--font-family2);
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+  }
+  div {
+    width: 300px; 
+    
+    overflow: hidden; 
+    margin: auto;
+
+}
+  
+  div img {
+    width: 100%; 
+    height: auto;
+  }
+ 
