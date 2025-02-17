@@ -14,10 +14,12 @@
     <meta property="og:url" content="https://wladij.github.io/wdd231/chamber" />
     <meta property="og:image" content="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTDcEfiz-XEzNeNixV7q3soCsvfgItlOicBEkazLoTGsFXJgKj5XlQH6FgXs38yw_XrxEoJGz6OeMcy3NyR8M-RB6WkYNcoO46-vhAfMA" />
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/normalice.css">
     <link rel="stylesheet" href="styles/theme.css">
-    <script src="scripts/script.js" defer></script>
+
+    <script src="scripts/discover.js" defer></script>
 </head>
 <body>
     <header>
@@ -33,9 +35,9 @@
         <nav id="animateme">
             <ul id="nav-links" class="nav-links">
                 <li><a id="home-page" href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
+                <li><a href="index.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Discover</a></li>
             </ul>
         </nav>
         
@@ -43,53 +45,25 @@
     </header>
     
     <main>
-        <div id="hero">
-            <img src="images/hero-image.webp" alt="Scalable, responsive hero image" width="1200" height="600">
-            <button class="cta"><a id="join-hero" href="join.html">Join</a></button>
-        </div>
-        
-        <h2 class="home-h2" >Home</h2>
-        <div class="info-cards">
-            <section class="card">
-                <h3>Events</h3>
-            </section>
-            
-            <section class="card">
-                <h3>Current Weather</h3>
-                <p id="current-weather"></p>
-            </section>
-            <section class="card">
-                <h3>Weather Forecast</h3>
-                <div id="forecast-info">
-                    <div class="forecast-day" id="day-1">
-                        <h3 id="day-name-1">Loading...</h3>
-                        <p id="temp-1">Loading...</p>
-                        <p id="desc-1">Loading...</p>
-                    </div>
-                    <div class="forecast-day" id="day-2">
-                        <h3 id="day-name-2">Loading...</h3>
-                        <p id="temp-2">Loading...</p>
-                        <p id="desc-2">Loading...</p>
-                    </div>
-                    <div class="forecast-day" id="day-3">
-                        <h3 id="day-name-3">Loading...</h3>
-                        <p id="temp-3">Loading...</p>
-                        <p id="desc-3">Loading...</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="business-cards">
-            <div class="menu">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
+        <dialog id="infoDialog">
+            <div class="dialog-content">
+                <h2 id="dialogTitle"></h2>
+                <figure>
+                    <img id="dialogImage" src="" alt="">
+                </figure>
+                <address id="dialogAddress"></address>
+                <p id="dialogDescription"></p>
+                <button id="closeDialog">Cerrar</button>
             </div>
-            <hr>
-            <article class="grid" id="members-list">
-               
-            </article>
-        </div>
+        </dialog>
+        <h2 class="title">Discover Local Attractions</h2>
+        <section id="discover-container" class="grid-container" id="discover-list">
+           
+        </section>
+        
+        <aside  id="sidebar-message" class="visitor-message">
+            <p id="visit-message"></p>
+        </aside>
     </main>
 
     <footer>
@@ -105,6 +79,7 @@
             <a href="#" id="icon"><img src="images/twitter.png" alt="Twitter"></a>
             <a href="#" id="icon"><img src="images/linkedin.png" alt="LinkedIn"></a>
         </div>
+
         <div>
             <p>WDD231 Class Project</p>
             <p>Joe Candelario</p>

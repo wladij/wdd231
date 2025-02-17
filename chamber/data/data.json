@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Timbuktu Manuscripts Library",
+      "address": "Avenue de l’Indépendance, Timbuktu, Mali",
+      "description": "A historical library housing thousands of ancient manuscripts on various subjects, reflecting the rich history of Timbuktu.",
+      "image": "images/library.webp"
+    },
+    {
+      "name": "Djinguereber Mosque",
+      "address": "Djinguereber, Timbuktu, Mali",
+      "description": "One of the most famous mosques in Timbuktu, built in 1327 using mud and wood, serving as a center for Islamic scholarship.",
+      "image": "images/mosque.webp"
+    },
+    {
+      "name": "Timbuktu Market",
+      "address": "Central Market, Timbuktu, Mali",
+      "description": "A vibrant market where locals trade goods like spices, textiles, and handmade crafts.",
+      "image": "images/market.webp"
+    },
+    {
+      "name": "Ahmed Baba Institute",
+      "address": "Cité Administrative, Timbuktu, Mali",
+      "description": "A research center dedicated to preserving and studying ancient manuscripts from West Africa.",
+      "image": "images/ahmed-baba.webp"
+    },
+    {
+      "name": "Sankore University",
+      "address": "Sankore, Timbuktu, Mali",
+      "description": "An ancient Islamic university that was a major center of learning during the Mali Empire.",
+      "image": "images/sankore.webp"
+    },
+    {
+      "name": "Timbuktu Desert Expeditions",
+      "address": "Timbuktu, Mali",
+      "description": "Experience the breathtaking Sahara Desert with guided camel tours and camping under the stars.",
+      "image": "images/desert.webp"
+    },
+    {
+      "name": "Festival au Désert",
+      "address": "Timbuktu, Mali",
+      "description": "A famous music festival celebrating Tuareg and West African culture, featuring traditional and modern performances.",
+      "image": "images/festival.webp"
+    },
+    {
+      "name": "Bouctou Village",
+      "address": "Near Timbuktu, Mali",
+      "description": "A small traditional village that showcases the lifestyle and culture of the Tuareg people.",
+      "image": "images/village.webp"
+    }
+  ]
+  
