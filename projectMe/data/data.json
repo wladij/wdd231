@@ -1,0 +1,24 @@
+{
+    "articles": [
+      {
+        "title": "Understanding Flexbox",
+        "description": "Learn how to master CSS Flexbox with real-world examples.",
+        "link": "#"
+      },
+      {
+        "title": "JavaScript Best Practices",
+        "description": "Improve your JS skills with these best practices.",
+        "link": "#"
+      },
+      {
+        "title": "Responsive Web Design Tips",
+        "description": "Make your website look great on any device.",
+        "link": "#"
+      }
+    ],
+    "resources": [
+        { "name": "HTML & CSS Guide", "description": "Learn the basics of HTML and CSS with this guide." },
+        { "name": "JavaScript Roadmap", "description": "A step-by-step roadmap for mastering JavaScript." },
+        { "name": "Project Ideas", "description": "A collection of coding project ideas to improve your skills." }
+    ]
+  }
