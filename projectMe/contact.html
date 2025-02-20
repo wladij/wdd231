@@ -11,9 +11,9 @@
     <meta property="og:url" content="https://wladij.github.io/wdd231/projectMe" />
     <meta property="og:image" content="https://img.goraymi.com/2019/07/25/5ac43c2e08c4822105cd947c9825a49c_xl.jpg" />
     <title>DevElevate - Home</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -30,45 +30,34 @@
         </nav>
     </header>
     
-    <main>
-        <section class="hero">
-            <img src="images/hero-image.webp" alt="hero-img">
-            <h1>Enhance Your Web Development Skills</h1>
-            <p>Resources, guides, and interactive challenges to improve your coding expertise.</p>
-            <button onclick="location.href='resources.html'">Get Started</button>
+    <main class="contact-container">
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to collaborate? Send us a message, and we'll get back to you soon.</p>
         </section>
-        
-        <section class="content">
-            <div class="articles">
-                <article>
-                    <h2>Latest Articles</h2>
-                    <ul>
-                        
-                    </ul>
-                </article>
-                <aside class="sidebar">
-                    <h2>Popular Topics</h2>
-                    <ul>
-                        <li><a href="#">HTML & CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">Frameworks</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="circles">
-                <div id="user-avatar" class="avatar-container"></div>
-                <div class="tech-circle" id="tech-circle"></div>
-            </div>
-            
-            <div class="resources" id="section-card">
-                <h2>Featured Resources</h2>
-                <div class="cards" id="resources-list">
-                    
+    
+        <section class="contact-form">
+            <form action="thanks.html" method="get">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
+    
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </section>
-        
     </main>
+    
     
     <footer>
         <div>
